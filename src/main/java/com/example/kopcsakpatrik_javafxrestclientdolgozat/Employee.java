@@ -1,21 +1,25 @@
 package com.example.kopcsakpatrik_javafxrestclientdolgozat;
 
 import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-public class Person {
+public class Employee {
     private int id;
     @Expose
+    @SerializedName(value = "Name")
     private String name;
     @Expose
+    @SerializedName(value = "Salary")
     private int salary;
     @Expose
+    @SerializedName(value = "CVV")
     private int cvv;
 
-    public Person(int id, String name, int email, int age) {
+    public Employee(int id, String name, int email, int cvv) {
         this.id = id;
         this.name = name;
         this.salary = email;
-        this.cvv = age;
+        this.cvv = cvv;
     }
 
     public int getId() {

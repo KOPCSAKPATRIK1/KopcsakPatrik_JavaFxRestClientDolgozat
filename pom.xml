@@ -67,7 +67,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.kopcsakpatrik_javafxrestclientdolgozat/com.example.kopcsakpatrik_javafxrestclientdolgozat.HelloApplication
+                                com.example.kopcsakpatrik_javafxrestclientdolgozat/com.example.kopcsakpatrik_javafxrestclientdolgozat.App
                             </mainClass>
                         </configuration>
                     </execution>
