@@ -1,14 +1,25 @@
 package com.example.kopcsakpatrik_javafxrestclientdolgozat;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.Alert;
 
-public class Controller {
-    @FXML
-    private Label welcomeText;
+public abstract class Controller {
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    protected void error(String headerText) {
+        error(headerText, "");
+    }
+
+    protected void error(String headerText, String contentText) {
+        alert(Alert.AlertType.ERROR, headerText, contentText);
+    }
+
+    protected void warning(String headerText) {
+        alert(Alert.AlertType.WARNING, headerText, "");
+    }
+
+    protected void alert(Alert.AlertType alertType, String headerText, String contentText) {
+        Alert alert = new Alert(alertType);
+        alert.setHeaderText(headerText);
+        alert.setContentText(contentText);
+        alert.showAndWait();
     }
 }
